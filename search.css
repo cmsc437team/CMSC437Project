@@ -3,10 +3,13 @@ h1{
     color: red;
 }
 
+
 button{
     display: inline-block;
     border: none;
     background: transparent;
+    outline: none;
+    cursor: pointer;
 }
 
 form{
@@ -30,6 +33,8 @@ form>div{
     top: 0;
     right: 0;
     margin: 20px;
+    text-align: center;
+    text-justify: center;
 }
 
 .comment-btn{
@@ -46,4 +51,11 @@ form>div{
     height: 50px;
     background-color: #ccc;
     border-radius: 25px;
+}
+
+.and.active,
+.or.active,
+.not.active{
+    border: 2px solid red;
+    border-radius: 50%;
 }
