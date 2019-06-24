@@ -49,3 +49,7 @@ function clearForm(){
 function search(){
     location.href = 'result.html'
 }
+
+function help(){
+    window.open('help.html',"","menubar=0, width=400, height=500")
+}
