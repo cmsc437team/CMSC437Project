@@ -56,3 +56,7 @@ function help(){
     else
         helpWindow = window.open('help.html',"","menubar=0, width=400, height=500")
 }
+
+function comment(){
+    location.href = 'comment.html'
+}
