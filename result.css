@@ -1,14 +1,25 @@
 
 body{
-    background-color: #ffffcc;
+    background-image: url("flag.png");
+}
+
+#style{
+    background: white;
+}
+
+p {
+    color: black;
+    font-size: 20px;
 }
 
 label{
     font-size: 20px;
+    background-color: white;
 }
 
 h1{
     text-align: center;
+    color: red;
 }
 
 h3{
