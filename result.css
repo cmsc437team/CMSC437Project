@@ -17,7 +17,7 @@ h3{
 }
 
 .comment-btn{
-    position: absolute;
+    position: static;
     right: 0;
     bottom: 0;
     margin: 20px;
