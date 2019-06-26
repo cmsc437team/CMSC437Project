@@ -26,9 +26,8 @@ form>div{
 }
 
 .help-btn{
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -48,15 +47,22 @@ form>div{
 .comment-btn,
 .search-btn,
 .clear-btn{
-    width: 100px;
-    height: 50px;
-    background-color: #ccc;
-    border-radius: 25px;
+    display: inline-block;
+    border-radius: 20px;
 }
 
 .and.active,
 .or.active,
 .not.active{
-    border: 2px solid red;
+    border: 2px solid red !important;
     border-radius: 50%;
+    background-color: transparent !important;
+}
+
+select{
+    max-width: 300px;
+}
+
+.inline{
+    display: inline-block !important;
 }
