@@ -15,3 +15,12 @@ h3{
     text-align: center;
     color: red;
 }
+
+.comment-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 20px;
+}
