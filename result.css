@@ -1,21 +1,23 @@
 
-body{
-    background-image: url("flag.png");
+body {
+    background: url("flag.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
-#style{
-    background: white;
+#root{
+    background:white;
+    border: 2px solid black; 
+    width: 75%; 
+    min-width: 500px;
+    position: relative;
 }
 
 p {
     color: black;
-    font-size: 20px;
+
 }
 
-label{
-    font-size: 20px;
-    background-color: white;
-}
 
 h1{
     text-align: center;
@@ -27,11 +29,12 @@ h3{
     color: red;
 }
 
-.comment-btn{
-    position: static;
-    right: 0;
-    bottom: 0;
-    margin: 20px;
-    display: inline-block;
+.comment-btn,
+.search-btn{
     border-radius: 20px;
+    margin: 20px;
+}
+
+.btn-link{
+    cursor: pointer;
 }

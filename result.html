@@ -1,81 +1,75 @@
 <html>
-    <head>
-        <title>Comment Form</title>
-    </head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-	<style>
-	textarea {
-		resize: none;
-	}
-	body{
-	background: url("flag.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	}
-	</style>
-	<body>
-	<div class="row">
-		<div class="col-xs-2"></div>
-		
-		<div class="col-xs-8" style="background:white; border-style:solid;border-width:2px;border-color:blac;">
-	
-		      <div class="container-fluid">
+
+<head>
+    <title>Comment Form</title>
+</head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="result.css" />
+
+<body>
+    <div id ="root" class="container">
         <h1>Search Results</h1>
-        <h3> Results for Words= _____</h3>
+        <h3 class="text-secondary">Results for Words= _____</h3>
+        <ol class="list-group list-group-flush" >
+            <li class="list-group-item">
+                <input type="checkbox" class="form-check-input" value="1"> 1. </input>
+                <ul class="list-unstyled">
+                    <li class="btn-link" href="#">Blockbuster science : the real science in science fiction / David Siegel Bernstein</li>
+                    <li><b>author:</b> Bernstein, David Siegel, 1967- author. </li>
+                    <li><b>published:</b> 2017 </li>
+                    <li><b>format:</b> Book </li>
+                    <li><b>subject:</b> Science fiction -- History and criticism. </li>
+                    <li><b>location:</b> UMBC Library( 1/ 1)</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <input type="checkbox" class="form-check-input" value="2"> 2. </input>
+                <ul class="list-unstyled">
+                    <li class="btn-link" href="#">Ecocriticism : the essential reader / edited by Ken Hiltner</li>
+                    <li><b>author:</b>Hiltner, Ken, editor.</li>
+                    <li><b>published:</b>2015</li>
+                    <li><b>format:</b> Book </li>
+                    <li><b>subject:</b>  Ecocriticism</li>
+                    <li><b>location:</b> UMBC Library( 1/ 0)</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <input type="checkbox" class="form-check-input" value="3"> 3. </input>
+                <ul class="list-unstyled">
+                    <li class="btn-link" href="#">Infinite dimensional analysis : a hitchhiker’s guide / Charalambos D. Aliprantis, Kim C. Border.</li>
+                    <li><b>author:</b>Aliprantis, Charalambos D. </li>
+                    <li><b>published:</b> 1999</li>
+                    <li><b>format:</b> Book </li>
+                    <li><b>subject:</b>  Functional Analysis</li>
+                    <li><b>location:</b> UMBC Library( 1/ 0)</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <input type="checkbox" class="form-check-input" value="4"> 4. </input>
+                <ul class="list-unstyled">
+                    <li class="btn-link" href="#">The more than complete hitchhiker’s guide : complete & unabridged / Douglas Adams.</li>
+                    <li><b>author:</b>Adams, Douglas</li>
+                    <li><b>published:</b>1993</li>
+                    <li><b>format:</b> Book </li>
+                    <li><b>subject:</b>  Prefect, Ford -- Fiction.</li>
+                    <li><b>location:</b>  UMBC Library( 1/ 0)</li>
+                </ul>
+            </li>
+        </ol>
+        <br />
+        <button type="button" class="btn btn-primary search-btn" onclick="index()">
+            New Search
+        </button>
+        <button type="button" class="btn btn-primary comment-btn" onclick="comment()">
+            Comment
+        </button>
+    </div>
+    <Script src="result.js"></Script>
+</body>
 
-        <p>1.</p>
-
-        <input type="checkbox" name="search1" value="Blockbuster science : the real science in science fiction / David Siegel Bernstein"> <br>
-        <label for="search1">Blockbuster science : the real science in science fiction / David Siegel Bernstein <br>
-                <b>author:</b>	Bernstein, David Siegel, 1967- author. <br>
-                <b>published:</b>	2017 <br>
-                <b>format:</b>	Book <br>
-                <b>subject:</b>	Science fiction -- History and criticism. <br>
-                <b>location:</b>	UMBC Library( 1/ 1)
-        </label>
-        <p>2.</p>
-
-        <input type="checkbox" name="search2" value="Ecocriticism : the essential reader / edited by Ken Hiltner"> <br>
-        <label for="search1">Ecocriticism : the essential reader / edited by Ken Hiltner <br>
-                <b>author:</b>	Hiltner, Ken, editor. <br>
-                <b>published:</b>	2015 <br>
-                <b>format:</b>	Book <br>
-                <b>subject:</b>	Ecocriticism<br>
-                <b>location:</b>	UMBC Library( 1/ 0)
-        </label>
-
-        <p>3.</p>
-        <input type="checkbox" name="search2" value="Infinite dimensional analysis : a hitchhiker’s guide / Charalambos D. Aliprantis, Kim C. Border."> <br>
-        <label for="search1">Infinite dimensional analysis : a hitchhiker’s guide / Charalambos D. Aliprantis, Kim C. Border. <br>
-                <b>author:</b>	Aliprantis, Charalambos D. <br>
-                <b>published:</b>	1999 <br>
-                <b>format:</b>	Book <br>
-                <b>subject:</b>	Functional Analysis<br>
-                <b>location:</b>	UMBC Library( 1/ 0)
-        </label>
-        
-        <p>4.</p>
-        <input type="checkbox" name="search2" value="The more than complete hitchhiker’s guide : complete & unabridged / Douglas Adams."> <br>
-        <label for="search1"> The more than complete hitchhiker’s guide : complete & unabridged / Douglas Adams. <br>
-                <b>author:</b>	Adams, Douglas <br>
-                <b>published:</b>	1993 <br>
-                <b>format:</b>	Book <br>
-                <b>subject:</b>	Prefect, Ford -- Fiction.<br>
-                <b>location:</b>	UMBC Library( 1/ 0)
-        </label>
-        
-        <br>
-        <button type="button" class="btn btn-primary" onclick="index()">New Search</button>     
-        <button type="button" class="btn btn-primary comment-btn" onclick="comment()"> Comment </button>
-        </div>
-        <Script src="result.js"></Script>
-		</div>
-		<div class="col-xs-2"></div>	
-	</div>
-    </body>
 </html>
